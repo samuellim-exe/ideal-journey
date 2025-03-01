@@ -9,7 +9,7 @@ const body = document.querySelector("body");
 const profile = document.getElementById("profile");
 
 // let currentTheme = localStorage.getItem("theme") || "light";
-let currentTheme = localStorage.getItem("theme");
+let currentTheme = localStorage.getItem("theme") || "light";
 toggleTheme(currentTheme);
 
 function toggleTheme(theme) {
