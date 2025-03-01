@@ -1,125 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Your Name | Home</title>
-    <meta name="description" content="" />
-    <meta name="keywords" content="" />
-    <meta name="author" content="" />
 
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
-      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Your Name | Home</title>
+  <meta name="description" content="" />
+  <meta name="keywords" content="" />
+  <meta name="author" content="" />
 
-  <body
-    class="font-sans antialiased text-gray-900 leading-normal tracking-wider bg-cover"
-    style="
-      background-image: url('https://images.unsplash.com/photo-1739312025707-bbf6765973b3');
-    "
-  >
-    <div
-      class="max-w-4xl flex items-center h-auto lg:h-screen flex-wrap mx-auto my-32 lg:my-0"
-    >
-      <!--Main Col-->
-      <div
-        id="profile"
-        class="w-full lg:w-3/5 rounded-lg lg:rounded-l-lg lg:rounded-r-none shadow-2xl bg-white opacity-75 mx-6 lg:mx-0"
-      >
-        <div class="p-4 md:p-12 text-center lg:text-left">
-          <!-- Image for mobile view-->
-          <div
-            class="block lg:hidden rounded-full shadow-xl mx-auto -mt-16 h-48 w-48 bg-cover bg-center"
-            style="
-              background-image: url('https://source.unsplash.com/MP0IUfwrn0A');
-            "
-          ></div>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="output.css">
+</head>
 
-          <h1 class="text-3xl font-bold pt-8 lg:pt-0">Your Name</h1>
-          <div
-            class="mx-auto lg:mx-0 w-4/5 pt-3 border-b-2 border-green-500 opacity-25"
-          ></div>
-          <p
-            class="pt-4 text-base font-bold flex items-center justify-center lg:justify-start"
-          >
-            <i
-              class="h-4 fill-current text-green-700 pr-4 fa-solid fa-briefcase"
-            ></i>
-            What you do
-          </p>
-          <p
-            class="pt-2 text-xs lg:text-sm flex items-center justify-center lg:justify-start"
-          >
-            <i
-              class="fa-solid fa-earth-asia h-4 fill-current text-green-700 pr-4"
-            ></i>
-            Your Location - 25.0000° N, 71.0000° W
-          </p>
-          <p class="pt-8 text-sm">
-            Totally optional short description about yourself, what you do and
-            so on.
-          </p>
+<body>
+  <div class="container">
+    <!--Main Col-->
+    <main id="profile">
+      <div class="profile-content">
+        <!-- Image for mobile view-->
+        <div class="mobile-image"></div>
 
-          <div class="pt-12 pb-8">
-            <a href="mailto:example@mail.com">
-              <button
-                class="bg-green-700 hover:bg-green-900 text-white font-bold py-2 px-4 rounded-full"
-              >
-                Get In Touch
-              </button>
-            </a>
-          </div>
+        <h1>Your Name</h1>
+        <div class="line"></div>
+        <p class="wyd">
+          <i class="desc-icon fa-solid fa-briefcase"></i>
+          What you do
+        </p>
+        <p class="location">
+          <i class="fa-solid fa-earth-asia desc-icon"></i>
+          Your Location - 25.0000° N, 71.0000° W
+        </p>
+        <p class="desc">
+          Totally optional short description about yourself, what you do and
+          so on.
+        </p>
 
-          <div
-            class="mt-6 pb-16 lg:pb-0 w-4/5 lg:w-full mx-auto flex flex-wrap items-center justify-between text-2xl"
-          >
-            <a class="link" href="#" data-tippy-content="@facebook_handle"
-              ><i class="fa-brands fa-facebook"></i
-            ></a>
-            <a class="link" href="#" data-tippy-content="@twitter_handle"
-              ><i class="fa-brands fa-square-x-twitter"></i
-            ></a>
-            <a class="link" href="#" data-tippy-content="@github_handle"
-              ><i class="fa-brands fa-github"></i
-            ></a>
-            <a class="link" href="#" data-tippy-content="@unsplash_handle"
-              ><i class="fa-brands fa-unsplash"></i
-            ></a>
-            <a class="link" href="#" data-tippy-content="@instagram_handle"
-              ><i class="fa-brands fa-instagram"></i
-            ></a>
-            <a class="link" href="#" data-tippy-content="@youtube_handle"
-              ><i class="fa-brands fa-youtube"></i
-            ></a>
-          </div>
+        <div class="btn-container">
+          <a href="mailto:example@mail.com">
+            <button class="btn">
+              Get In Touch
+            </button>
+          </a>
+        </div>
+
+        <div class="socials-container">
+          <a class="link" href="#" data-tippy-content="@facebook_handle"><i class="fa-brands fa-facebook"></i></a>
+          <a class="link" href="#" data-tippy-content="@twitter_handle"><i
+              class="fa-brands fa-square-x-twitter"></i></a>
+          <a class="link" href="#" data-tippy-content="@github_handle"><i class="fa-brands fa-github"></i></a>
+          <a class="link" href="#" data-tippy-content="@unsplash_handle"><i class="fa-brands fa-unsplash"></i></a>
+          <a class="link" href="#" data-tippy-content="@instagram_handle"><i class="fa-brands fa-instagram"></i></a>
+          <a class="link" href="#" data-tippy-content="@youtube_handle"><i class="fa-brands fa-youtube"></i></a>
         </div>
       </div>
+    </main>
 
-      <!--Img Col-->
-      <div class="w-full lg:w-2/5">
-        <!-- Big profile image for side bar (desktop) -->
-        <img
-          src="https://images.unsplash.com/photo-1739980873302-b93d3bd4991e?q=80&w=1935&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-          class="rounded-none lg:rounded-lg shadow-2xl hidden lg:block"
-        />
-        <!-- Image from: http://unsplash.com/photos/MP0IUfwrn0A -->
-      </div>
-
-      <!-- Pin to top right corner -->
-      <div class="absolute top-0 right-0 h-12 w-18 p-4">
-        <button class="js-change-theme focus:outline-none">🌙</button>
-      </div>
+    <!--Img Col-->
+    <div class="img-col">
+      <!-- Big profile image for side bar (desktop) -->
+      <img
+        src="https://images.unsplash.com/photo-1739980873302-b93d3bd4991e?q=80&w=1935&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" />
+      <!-- Image from: http://unsplash.com/photos/MP0IUfwrn0A -->
     </div>
 
-    <script src="https://unpkg.com/popper.js@1/dist/umd/popper.min.js"></script>
-    <script src="https://unpkg.com/tippy.js@4"></script>
-    <script src="./script.js"></script>
-  </body>
+    <!-- Pin to top right corner -->
+    <div class="theme-toggle">
+      <button class="js-change-theme">🌙</button>
+    </div>
+  </div>
+
+  <script src="https://unpkg.com/popper.js@1/dist/umd/popper.min.js"></script>
+  <script src="https://unpkg.com/tippy.js@4"></script>
+  <script src="./script.js"></script>
+</body>
+
 </html>
