@@ -13,41 +13,73 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
     integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link rel="stylesheet" href="output.css">
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <style type="text/tailwindcss">
+    body {
+      background-image: url("https://images.unsplash.com/photo-1739312025707-bbf6765973b3");
+    }
+
+    .mobile-image {
+        background-image: url('https://images.unsplash.com/photo-1739980873302-b93d3bd4991e?q=80&w=1935&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+    }
+
+    main h1 {
+        @apply text-3xl font-bold pt-8 lg:pt-0;
+    }
+
+    .desc-icon {
+        @apply h-4 fill-current text-teal-700 pr-4;
+    }
+
+    .dark{
+        @apply bg-gray-900 text-white;
+    }
+    .light{
+        @apply bg-gray-100 text-gray-900;
+    }
+
+  </style>
 </head>
 
-<body>
-  <div class="container">
+<body class="font-sans antialiased text-gray-900 leading-normal tracking-wider bg-cover">
+  <div class="max-w-4xl flex items-center h-auto lg:h-screen flex-wrap mx-auto my-32 lg:my-0">
     <!--Main Col-->
-    <main id="profile">
-      <div class="profile-content">
+    <main id="profile"
+      class="w-full lg:w-3/5 rounded-lg lg:rounded-l-lg lg:rounded-r-none shadow-2xl opacity-75 mx-6 lg:mx-0">
+      <div class="p-4 md:p-12 text-center lg:text-left">
         <!-- Image for mobile view-->
-        <div class="mobile-image"></div>
+        <div class="block lg:hidden rounded-full shadow-xl mx-auto -mt-16 h-48 w-48 bg-cover bg-center mobile-image">
+        </div>
 
+        <!-- Name -->
         <h1>Your Name</h1>
-        <div class="line"></div>
-        <p class="wyd">
+        <!-- line -->
+        <div class="mx-auto lg:mx-0 w-4/5 pt-3 border-b-2 border-teal-500 opacity-25"></div>
+        <!-- What you do -->
+        <p class="pt-4 text-base font-bold flex items-center justify-center lg:justify-start">
           <i class="desc-icon fa-solid fa-briefcase"></i>
           What you do
         </p>
-        <p class="location">
-          <i class="fa-solid fa-earth-asia desc-icon"></i>
+        <p class="pt-2 text-xs lg:text-sm flex items-center justify-center lg:justify-start">
+          <i class="desc-icon fa-solid fa-earth-asia"></i>
           Your Location - 25.0000° N, 71.0000° W
         </p>
-        <p class="desc">
+        <p class="pt-8 text-sm">
           Totally optional short description about yourself, what you do and
           so on.
         </p>
 
-        <div class="btn-container">
+        <!-- Contact Button -->
+        <div class="pt-12 pb-8">
           <a href="mailto:example@mail.com">
-            <button class="btn">
+            <button class="bg-teal-700 hover:bg-teal-900 text-white font-bold py-2 px-4 rounded-full cursor-pointer">
               Get In Touch
             </button>
           </a>
         </div>
 
-        <div class="socials-container">
+        <!-- Social Icons -->
+        <div class="mt-6 pb-16 lg:pb-0 w-4/5 lg:w-full mx-auto flex flex-wrap items-center justify-between text-2xl">
           <a class="link" href="#" data-tippy-content="@facebook_handle"><i class="fa-brands fa-facebook"></i></a>
           <a class="link" href="#" data-tippy-content="@twitter_handle"><i
               class="fa-brands fa-square-x-twitter"></i></a>
@@ -60,16 +92,17 @@
     </main>
 
     <!--Img Col-->
-    <div class="img-col">
+    <div class="w-full lg:w-2/5">
       <!-- Big profile image for side bar (desktop) -->
       <img
-        src="https://images.unsplash.com/photo-1739980873302-b93d3bd4991e?q=80&w=1935&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" />
+        src="https://images.unsplash.com/photo-1739980873302-b93d3bd4991e?q=80&w=1935&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        class="rounded-none lg:rounded-lg shadow-2xl hidden lg:block" />
       <!-- Image from: http://unsplash.com/photos/MP0IUfwrn0A -->
     </div>
 
     <!-- Pin to top right corner -->
-    <div class="theme-toggle">
-      <button class="js-change-theme">🌙</button>
+    <div class="absolute top-0 right-0 h-12 w-18 p-4">
+      <button class="js-change-theme focus:outline-none">🌙</button>
     </div>
   </div>
 
